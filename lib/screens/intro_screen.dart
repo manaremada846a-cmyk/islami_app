@@ -13,6 +13,7 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
    String text1="Welcome To Islmi App";
    String text2="Welcome To Islmi App";
+    String text3="Welcome To Islmi App";
   String imageUrl= AppImages.introImage1;
  String buttonText="Next";
  int count=0;
@@ -34,10 +35,17 @@ class _IntroScreenState extends State<IntroScreen> {
     ];
      List<String> texts2 = [
       "",
-      "We Are Very Excited To Have You In Our \nCommunity",
+      "We Are Very Excited To Have You In Our",
       "Read, and your Lord is the Most Generous",
-      "Praise the name of your Lord, the Most \nHigh",
-      "You can listen to the Holy Quran Radio through\n the application for free and easily",
+      "Praise the name of your Lord, the Most",
+      "You can listen to the Holy Quran Radio through",
+    ];
+     List<String> texts3 = [
+      "",//0
+      "Community",
+      "",//2
+      "High",
+      "the application for free and easily",
     ];
    {
        
@@ -70,6 +78,7 @@ class _IntroScreenState extends State<IntroScreen> {
             height: 120,
             child: Center(
               child: Column(
+                 
                 children: [
                   Text(
                     text1,
@@ -79,21 +88,32 @@ class _IntroScreenState extends State<IntroScreen> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),if(count!=0)
-                   Padding(
-                     padding: const EdgeInsets.all(12),
-                     child: Row( mainAxisAlignment: MainAxisAlignment.center,
-                       children: [
-                        
-                         Text(
-                          text2,
-                          style: TextStyle(
-                            color: AppColors.goldColor,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                          ),
-                                           ),
-                       ],
-                     ),
+                   Row(  mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                      
+                       Text(
+                        text2,
+                        style: TextStyle(
+                          color: AppColors.goldColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                                         ),
+                     ],
+                   ),
+                   if(count!=0||count!=2)
+                   Row(  mainAxisAlignment: MainAxisAlignment.center,
+                     children: [
+                      
+                       Text(
+                        text3,
+                        style: TextStyle(
+                          color: AppColors.goldColor,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                        ),
+                                         ),
+                     ],
                    ),
                 ],
               ),
@@ -108,6 +128,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       text1=texts[count];
                   imageUrl= imagesUrls[count];
                   text2=texts2[count];
+                  text3=texts3[count];
                   }
                   else{}
                   
@@ -136,7 +157,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   text1=texts[count];
                   imageUrl= imagesUrls[count];
                    text2=texts2[count];
-                  
+                    text3=texts3[count];
                  } 
                  
                 if(count==4) {
