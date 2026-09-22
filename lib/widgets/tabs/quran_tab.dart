@@ -168,7 +168,7 @@ class QuranTab extends StatelessWidget {
                           alignment:Alignment.center ,
                           children: [ SvgPicture.asset(Assets.imgSurNumberFrame),
                           Text((index+1).toString(), style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 16,
                             fontWeight: FontWeight.w700,
                             color: AppColors.whiteColor,
                           ),)]),
