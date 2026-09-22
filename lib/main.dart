@@ -27,7 +27,7 @@ void main() {
      SuraDetailesScreen.appRoute:(context) => SuraDetailesScreen(),
      TimeScreen.appRoute:(context) => TimeScreen(),
      SplashScreen.appRoute:(context) => SplashScreen()
-  } ,initialRoute: IntroScreen.appRoute,
+  } ,initialRoute: HomeScreen.appRoute,
  );
   }
 

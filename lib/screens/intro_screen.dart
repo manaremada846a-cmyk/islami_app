@@ -13,7 +13,7 @@ class IntroScreen extends StatefulWidget {
 class _IntroScreenState extends State<IntroScreen> {
    String text1="Welcome To Islmi App";
    String text2="Welcome To Islmi App";
-    String text3="Welcome To Islmi App";
+    String text3=" ";
   String imageUrl= AppImages.introImage1;
  String buttonText="Next";
  int count=0;
@@ -38,14 +38,14 @@ class _IntroScreenState extends State<IntroScreen> {
       "We Are Very Excited To Have You In Our",
       "Read, and your Lord is the Most Generous",
       "Praise the name of your Lord, the Most",
-      "You can listen to the Holy Quran Radio through",
+      "You can listen to the Holy Quran Radio",
     ];
      List<String> texts3 = [
       "",//0
       "Community",
       "",//2
       "High",
-      "the application for free and easily",
+      "through the application for free and easily",
     ];
    {
        
@@ -57,7 +57,7 @@ class _IntroScreenState extends State<IntroScreen> {
           Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.all(55),
+                padding: const EdgeInsets.only(left: 55,right: 55,top: 55),
                 child: Image.asset(AppImages.islamiBackground),
               ),
               Positioned(
@@ -67,58 +67,52 @@ class _IntroScreenState extends State<IntroScreen> {
               ),
             ],
           ),
-          Align(
-            alignment: AlignmentGeometry.topCenter,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Image.asset(imageUrl),
-            ),
-          ),
-          SizedBox(
-            height: 120,
-            child: Center(
-              child: Column(
-                 
-                children: [
-                  Text(
-                    text1,
+          Padding(
+            padding: const EdgeInsets.only(right: 20,left: 20),
+            child: Image.asset(imageUrl),
+          ) ,SizedBox(height: 40,),
+          Column(
+           
+            children: [
+              if(count==0)SizedBox(height: 40,),
+              Text(
+                text1,
+                style: TextStyle(
+                  color: AppColors.goldColor,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                ),
+              ), SizedBox(height: 40,),  
+              if(count!=0)
+               Row(  mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                  
+                   Text(
+                    text2,
                     style: TextStyle(
                       color: AppColors.goldColor,
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
                     ),
-                  ),if(count!=0)
-                   Row(  mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
-                      
-                       Text(
-                        text2,
-                        style: TextStyle(
-                          color: AppColors.goldColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
-                                         ),
-                     ],
-                   ),
-                   if(count!=0||count!=2)
-                   Row(  mainAxisAlignment: MainAxisAlignment.center,
-                     children: [
-                      
-                       Text(
-                        text3,
-                        style: TextStyle(
-                          color: AppColors.goldColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                        ),
-                                         ),
-                     ],
-                   ),
-                ],
-              ),
-            ),
-          ),
+                                     ),
+                 ],
+               ),SizedBox(height: 10,), 
+               if(count!=0||count!=2)
+               Row(  mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                  
+                   Text(
+                    text3,
+                    style: TextStyle(
+                      color: AppColors.goldColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
+                                     ),
+                 ],
+               ),
+            ],
+          ),SizedBox(height: 30,),
           Row(
             children: [
               TextButton(
