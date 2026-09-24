@@ -24,6 +24,9 @@ abstract final class Assets {
       AssetGenImage('assets/66acd03d6630cba2914243a5de4e0eebf23d710e.jpg');
   static const AssetGenImage a8cdade62b49226d698fe69b38c30a1796aebd4e9 =
       AssetGenImage('assets/8cdade62b49226d698fe69b38c30a1796aebd4e9.png');
+  static const AssetGenImage background1 = AssetGenImage(
+    'assets/Background (1).png',
+  );
   static const AssetGenImage frame31 = AssetGenImage('assets/Frame 3 (1).png');
   static const AssetGenImage frame32 = AssetGenImage('assets/Frame 3 (2).png');
   static const AssetGenImage frame33 = AssetGenImage('assets/Frame 3 (3).png');
@@ -40,17 +43,20 @@ abstract final class Assets {
   static const String vector4 = 'assets/Vector (4).svg';
   static const AssetGenImage ced4c002894f38a7e1cfe8a978c8df2cebb1868d =
       AssetGenImage('assets/ced4c002894f38a7e1cfe8a978c8df2cebb1868d.png');
+  static const AssetGenImage corner1 = AssetGenImage('assets/corner1.png');
   static const AssetGenImage ecd5c672da95c50ecce229b847bd9e53b4043b9b =
       AssetGenImage('assets/ecd5c672da95c50ecce229b847bd9e53b4043b9b.jpg');
   static const AssetGenImage edb72ddd4874057134b382d16cc672d438493ca0 =
       AssetGenImage('assets/edb72ddd4874057134b382d16cc672d438493ca0.jpg');
   static const AssetGenImage glow = AssetGenImage('assets/glow.png');
+  static const AssetGenImage hadithBG = AssetGenImage('assets/hadithBG.png');
   static const String icRadio = 'assets/ic_radio.svg';
   static const String icSebha = 'assets/ic_sebha.svg';
   static const String icTime = 'assets/ic_time.svg';
   static const AssetGenImage imgHeader = AssetGenImage('assets/img_header.png');
   static const String imgSurNumberFrame = 'assets/img_sur_number_frame.svg';
   static const AssetGenImage mosqo = AssetGenImage('assets/mosqo.png');
+  static const AssetGenImage mosque = AssetGenImage('assets/mosque.png');
   static const String quranSvgrepoCom1 = 'assets/quran-svgrepo-com 1.svg';
   static const AssetGenImage radio = AssetGenImage('assets/radio.png');
   static const AssetGenImage shape1 = AssetGenImage('assets/shape1.png');
@@ -70,6 +76,7 @@ abstract final class Assets {
     a644c09dcd4aa9465b70ec6bc8cd71dfcb3d92459,
     a66acd03d6630cba2914243a5de4e0eebf23d710e,
     a8cdade62b49226d698fe69b38c30a1796aebd4e9,
+    background1,
     frame31,
     frame32,
     frame33,
@@ -85,15 +92,18 @@ abstract final class Assets {
     quranCard,
     vector4,
     ced4c002894f38a7e1cfe8a978c8df2cebb1868d,
+    corner1,
     ecd5c672da95c50ecce229b847bd9e53b4043b9b,
     edb72ddd4874057134b382d16cc672d438493ca0,
     glow,
+    hadithBG,
     icRadio,
     icSebha,
     icTime,
     imgHeader,
     imgSurNumberFrame,
     mosqo,
+    mosque,
     quranSvgrepoCom1,
     radio,
     shape1,
