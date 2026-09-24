@@ -3,8 +3,7 @@ import 'package:islami_app/screens/hadith_screen.dart';
 import 'package:islami_app/screens/home_screen.dart';
 import 'package:islami_app/screens/intro_screen.dart';
 import 'package:islami_app/screens/radio_screen.dart';
-import 'package:islami_app/screens/sebha_screen.dart';
-import 'package:islami_app/screens/splash_screen.dart';
+ import 'package:islami_app/screens/splash_screen.dart';
 import 'package:islami_app/screens/sura_detailes_screen.dart';
 import 'package:islami_app/screens/time_screen.dart';
 
@@ -23,11 +22,10 @@ void main() {
     HadithScreen.appRoute:(context) => HadithScreen(),
     IntroScreen.appRoute:(context) => IntroScreen(),
      RadioScreen.appRoute:(context) => RadioScreen(),
-     SebhaScreen.appRoute:(context) => SebhaScreen(),
-     SuraDetailesScreen.appRoute:(context) => SuraDetailesScreen(),
+      SuraDetailesScreen.appRoute:(context) => SuraDetailesScreen(),
      TimeScreen.appRoute:(context) => TimeScreen(),
      SplashScreen.appRoute:(context) => SplashScreen()
-  } ,initialRoute: HomeScreen.appRoute,
+  } ,initialRoute: HomeScreen.appRoute, 
  );
   }
 

@@ -1,11 +1,26 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:islami_app/commen/colors.dart';
 import 'package:islami_app/gen/assets.gen.dart';
+import 'package:islami_app/models/hadeat_model.dart';
 
-class HadithTab extends StatelessWidget {
+class HadithTab extends StatefulWidget {
   const HadithTab({super.key});
 
+  @override
+  State<HadithTab> createState() => _HadithTabState();
+}
+
+class _HadithTabState extends State<HadithTab> {
+  @override
+  void initState() {
+    super.initState();
+    getHadeath();
+  }
+
+  List<HadeatModel>ahadeeth=[];
+  bool  isLoading=true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,31 +47,70 @@ class HadithTab extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 50, right: 50, top: 35),
                 child: Image.asset(Assets.imgHeader.path),
               ),
+              if(isLoading)
+              CircularProgressIndicator()
+            else
               Expanded(
                 child: CarouselSlider.builder(
-                  itemCount: 20,
+                  itemCount: ahadeeth.length,
                   itemBuilder: (context, index, realIndex) {
                     return Container(
-                     
-                      decoration: BoxDecoration( color: AppColors.goldColor,
-                      borderRadius: BorderRadius.all(Radius.circular(22))),
-                      child: Column(children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row( 
-                            children: [
-                              Transform.flip(flipX: true,
-                                child: Image.asset(Assets.corner1.path,width: 100,height: 100,)),
-                                SizedBox(width: 110,
-                                  child: Center(child: Text("text1",style: TextStyle(color: AppColors.blackColor,fontSize: 24,fontWeight: FontWeight.w700,)))),
-                               Image.asset(Assets.corner1.path,width: 100,height: 100),
-                            ],
+                      decoration: BoxDecoration(
+                        color: AppColors.goldColor,
+                        borderRadius: BorderRadius.all(Radius.circular(22)),
+                      ),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                Transform.flip(
+                                  flipX: true,
+                                  child: Image.asset(
+                                    Assets.corner1.path,
+                                    width: 100,
+                                    height: 100,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 110,
+                                  child: Center(
+                                    child: Text(
+                                      textDirection: TextDirection.rtl,
+                                      ahadeeth[index].name,
+                                      style: TextStyle(
+                                        color: AppColors.blackColor,
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Image.asset(
+                                  Assets.corner1.path,
+                                  width: 100,
+                                  height: 100,
+                                ),
+                              ],
+                            ),
                           ),
-                        ),Expanded(child: SingleChildScrollView(
-                          scrollDirection:Axis.vertical ,
-                          child: Text( "text2",style: TextStyle(color: AppColors.blackColor,fontSize: 16,fontWeight: FontWeight.w700,)),)),
-                        Image.asset(Assets.mosque.path)
-                      ],),
+                          Expanded(
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.vertical,
+                              child: Text(
+                                ahadeeth[index].content,
+                                style: TextStyle(
+                                  color: AppColors.blackColor,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Image.asset(Assets.mosque.path),
+                        ],
+                      ),
                     );
                   },
                   options: CarouselOptions(
@@ -72,4 +126,25 @@ class HadithTab extends StatelessWidget {
       ),
     );
   }
-}
+
+  Future<void> getHadeath() async {
+  for (int i = 1; i <= 50; i++) {
+    String data =
+        await rootBundle.loadString("assets/hadeeth/h$i (1).txt");
+
+    data = data.trim();
+
+    List<String> hadeath = data.split("\n");
+
+    ahadeeth.add(
+      HadeatModel(
+        content: hadeath.sublist(1).join("\n"),
+        name: hadeath[0],
+      ),
+    );
+  }
+
+  setState(() {
+    isLoading = false;
+  });
+}}

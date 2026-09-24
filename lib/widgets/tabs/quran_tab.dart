@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islami_app/commen/colors.dart';
+import 'package:islami_app/data/suras_lists.dart';
+import 'package:islami_app/models/suras_data.dart';
 import 'package:islami_app/gen/assets.gen.dart';
+import 'package:islami_app/screens/sura_detailes_screen.dart';
 
 class QuranTab extends StatelessWidget {
   const QuranTab({super.key});
@@ -163,45 +166,12 @@ class QuranTab extends StatelessWidget {
                   child: ListView.separated(
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
-                      return ListTile(contentPadding: EdgeInsets.only(left: 20,right: 20),
-                        leading:Stack(
-                          alignment:Alignment.center ,
-                          children: [ SvgPicture.asset(Assets.imgSurNumberFrame),
-                          Text((index+1).toString(), style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.whiteColor,
-                          ),)]),
-                        title: Text(
-                          "data",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.whiteColor,
-                          ),
-                        ),
-                        subtitle: Text(
-                          "data",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.whiteColor,
-                          ),
-                        ),
-                        trailing: Text(
-                          "data",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.whiteColor,
-                          ),
-                        ),
-                      );
+                      return surasDataGet(SurasData.allSuras[index],context);
                     },
                     separatorBuilder: (context, index) {
                       return Divider(color: AppColors.whiteColor,endIndent: 50,indent: 50,height: 0.5,);
                     },
-                    itemCount: 20,
+                    itemCount:SurasLists. arabiSuras.length,
                   ),
                 ),
               ],
@@ -210,5 +180,46 @@ class QuranTab extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  ListTile surasDataGet( SurasData surasdata,BuildContext context) {
+    return ListTile(
+      onTap: (){
+        Navigator.of(context).pushNamed(SuraDetailesScreen.appRoute,arguments: surasdata);
+      },
+      contentPadding: EdgeInsets.only(left: 20,right: 20),
+                      leading:Stack(
+                        alignment:Alignment.center ,
+                        children: [ SvgPicture.asset(Assets.imgSurNumberFrame),
+                        Text((surasdata.id).toString(), style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.whiteColor,
+                        ),)]),
+                      title: Text(
+                       surasdata.suraNameEn,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.whiteColor,
+                        ),
+                      ),
+                      subtitle: Text(
+                       "${surasdata.ayasNunmber } Verses  ",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.whiteColor,
+                        ),
+                      ),
+                      trailing: Text(
+                       surasdata.suraNameAr,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.whiteColor,
+                        ),
+                      ),
+                    );
   }
 }
