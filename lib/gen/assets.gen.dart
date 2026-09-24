@@ -716,6 +716,8 @@ abstract final class Assets {
     'assets/Mosque-01 1.png',
   );
   static const String page1 = 'assets/Page-1.svg';
+  static const String pause = 'assets/Pause.svg';
+  static const String polygon2 = 'assets/Polygon 2.svg';
   static const String quraan = 'assets/Quraan.svg';
   static const AssetGenImage quranCard = AssetGenImage('assets/QuranCard.png');
   static const AssetGenImage sebhaBody1 = AssetGenImage(
@@ -729,6 +731,8 @@ abstract final class Assets {
     'assets/SplashRight.png',
   );
   static const String vector4 = 'assets/Vector (4).svg';
+  static const String volumeCross = 'assets/Volume Cross.svg';
+  static const String volumeHigh = 'assets/Volume High.svg';
   static const AssetGenImage ced4c002894f38a7e1cfe8a978c8df2cebb1868d =
       AssetGenImage('assets/ced4c002894f38a7e1cfe8a978c8df2cebb1868d.png');
   static const AssetGenImage corner1 = AssetGenImage('assets/corner1.png');
@@ -754,6 +758,12 @@ abstract final class Assets {
   static const AssetGenImage radioBg = AssetGenImage('assets/radioBg.jpg');
   static const AssetGenImage routeLogo = AssetGenImage('assets/route_logo.png');
   static const AssetGenImage sephaBG = AssetGenImage('assets/sephaBG.jpg');
+  static const AssetGenImage soundWave11 = AssetGenImage(
+    'assets/soundWave 1 (1).png',
+  );
+  static const AssetGenImage soundWave1 = AssetGenImage(
+    'assets/soundWave 1.png',
+  );
   static const AssetGenImage splashBG = AssetGenImage('assets/splashBG.png');
   static const AssetGenImage splashLeft = AssetGenImage(
     'assets/splashLeft.png',
@@ -786,6 +796,8 @@ abstract final class Assets {
     islami1,
     mosque011,
     page1,
+    pause,
+    polygon2,
     quraan,
     quranCard,
     sebhaBody1,
@@ -793,6 +805,8 @@ abstract final class Assets {
     shape071,
     splashRight,
     vector4,
+    volumeCross,
+    volumeHigh,
     ced4c002894f38a7e1cfe8a978c8df2cebb1868d,
     corner1,
     ecd5c672da95c50ecce229b847bd9e53b4043b9b,
@@ -811,6 +825,8 @@ abstract final class Assets {
     radioBg,
     routeLogo,
     sephaBG,
+    soundWave11,
+    soundWave1,
     splashBG,
     splashLeft,
     splashUp,
