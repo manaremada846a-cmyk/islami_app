@@ -697,9 +697,14 @@ abstract final class Assets {
       AssetGenImage('assets/1eee3505289310e0cfc11dd67dced3869db67b05.png');
   static const AssetGenImage a8cdade62b49226d698fe69b38c30a1796aebd4e9 =
       AssetGenImage('assets/8cdade62b49226d698fe69b38c30a1796aebd4e9.png');
+  static const AssetGenImage azkarconticer = AssetGenImage(
+    'assets/Azkarconticer.png',
+  );
   static const AssetGenImage background1 = AssetGenImage(
     'assets/Background (1).png',
   );
+  static const AssetGenImage baloor1 = AssetGenImage('assets/Baloor1.png');
+  static const AssetGenImage baloor2 = AssetGenImage('assets/Baloor2.png');
   static const AssetGenImage frame31 = AssetGenImage('assets/Frame 3 (1).png');
   static const AssetGenImage frame32 = AssetGenImage('assets/Frame 3 (2).png');
   static const AssetGenImage frame33 = AssetGenImage('assets/Frame 3 (3).png');
@@ -720,6 +725,10 @@ abstract final class Assets {
   static const String polygon2 = 'assets/Polygon 2.svg';
   static const String quraan = 'assets/Quraan.svg';
   static const AssetGenImage quranCard = AssetGenImage('assets/QuranCard.png');
+  static const AssetGenImage rectangle137 = AssetGenImage(
+    'assets/Rectangle 137.png',
+  );
+  static const String rectangleazkar = 'assets/Rectangleazkar.svg';
   static const AssetGenImage sebhaBody1 = AssetGenImage(
     'assets/SebhaBody 1.png',
   );
@@ -733,6 +742,7 @@ abstract final class Assets {
   static const String vector4 = 'assets/Vector (4).svg';
   static const String volumeCross = 'assets/Volume Cross.svg';
   static const String volumeHigh = 'assets/Volume High.svg';
+  static const String volumeSlash = 'assets/Volume Slash.svg';
   static const AssetGenImage ced4c002894f38a7e1cfe8a978c8df2cebb1868d =
       AssetGenImage('assets/ced4c002894f38a7e1cfe8a978c8df2cebb1868d.png');
   static const AssetGenImage corner1 = AssetGenImage('assets/corner1.png');
@@ -741,6 +751,7 @@ abstract final class Assets {
   static const AssetGenImage edb72ddd4874057134b382d16cc672d438493ca0 =
       AssetGenImage('assets/edb72ddd4874057134b382d16cc672d438493ca0.jpg');
   static const $AssetsFilesGen files = $AssetsFilesGen();
+  static const AssetGenImage groubtime = AssetGenImage('assets/groubtime.png');
   static const $AssetsHadeethGen hadeeth = $AssetsHadeethGen();
   static const AssetGenImage hadithBG = AssetGenImage('assets/hadithBG.png');
   static const String icRadio = 'assets/ic_radio.svg';
@@ -761,9 +772,6 @@ abstract final class Assets {
   static const AssetGenImage soundWave11 = AssetGenImage(
     'assets/soundWave 1 (1).png',
   );
-  static const AssetGenImage soundWave1 = AssetGenImage(
-    'assets/soundWave 1.png',
-  );
   static const AssetGenImage splashBG = AssetGenImage('assets/splashBG.png');
   static const AssetGenImage splashLeft = AssetGenImage(
     'assets/splashLeft.png',
@@ -775,13 +783,18 @@ abstract final class Assets {
   static const AssetGenImage tajMahalAgraIndia2 = AssetGenImage(
     'assets/taj-mahal-agra-india 2.png',
   );
+  static const AssetGenImage timeCard = AssetGenImage('assets/timeCard.png');
+  static const AssetGenImage timebackg = AssetGenImage('assets/timebackg.png');
 
   /// List of all assets
   static List<dynamic> get values => [
     a09d672d20a577dd0d3a402137b037d41ec924502,
     a1eee3505289310e0cfc11dd67dced3869db67b05,
     a8cdade62b49226d698fe69b38c30a1796aebd4e9,
+    azkarconticer,
     background1,
+    baloor1,
+    baloor2,
     frame31,
     frame32,
     frame33,
@@ -800,6 +813,8 @@ abstract final class Assets {
     polygon2,
     quraan,
     quranCard,
+    rectangle137,
+    rectangleazkar,
     sebhaBody1,
     shape0411,
     shape071,
@@ -807,10 +822,12 @@ abstract final class Assets {
     vector4,
     volumeCross,
     volumeHigh,
+    volumeSlash,
     ced4c002894f38a7e1cfe8a978c8df2cebb1868d,
     corner1,
     ecd5c672da95c50ecce229b847bd9e53b4043b9b,
     edb72ddd4874057134b382d16cc672d438493ca0,
+    groubtime,
     hadithBG,
     icRadio,
     icSebha,
@@ -826,12 +843,13 @@ abstract final class Assets {
     routeLogo,
     sephaBG,
     soundWave11,
-    soundWave1,
     splashBG,
     splashLeft,
     splashUp,
     tajMahalAgraIndia1,
     tajMahalAgraIndia2,
+    timeCard,
+    timebackg,
   ];
 }
 
