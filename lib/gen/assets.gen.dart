@@ -693,8 +693,6 @@ class $AssetsFilesSurasGen {
 abstract final class Assets {
   static const AssetGenImage a09d672d20a577dd0d3a402137b037d41ec924502 =
       AssetGenImage('assets/09d672d20a577dd0d3a402137b037d41ec924502.jpg');
-  static const AssetGenImage a1eee3505289310e0cfc11dd67dced3869db67b05 =
-      AssetGenImage('assets/1eee3505289310e0cfc11dd67dced3869db67b05.png');
   static const AssetGenImage a8cdade62b49226d698fe69b38c30a1796aebd4e9 =
       AssetGenImage('assets/8cdade62b49226d698fe69b38c30a1796aebd4e9.png');
   static const AssetGenImage azkarconticer = AssetGenImage(
@@ -753,6 +751,7 @@ abstract final class Assets {
   static const $AssetsFilesGen files = $AssetsFilesGen();
   static const AssetGenImage groubtime = AssetGenImage('assets/groubtime.png');
   static const $AssetsHadeethGen hadeeth = $AssetsHadeethGen();
+  static const AssetGenImage hadeethBg = AssetGenImage('assets/hadeethBg.png');
   static const AssetGenImage hadithBG = AssetGenImage('assets/hadithBG.png');
   static const String icRadio = 'assets/ic_radio.svg';
   static const String icSebha = 'assets/ic_sebha.svg';
@@ -789,7 +788,6 @@ abstract final class Assets {
   /// List of all assets
   static List<dynamic> get values => [
     a09d672d20a577dd0d3a402137b037d41ec924502,
-    a1eee3505289310e0cfc11dd67dced3869db67b05,
     a8cdade62b49226d698fe69b38c30a1796aebd4e9,
     azkarconticer,
     background1,
@@ -828,6 +826,7 @@ abstract final class Assets {
     ecd5c672da95c50ecce229b847bd9e53b4043b9b,
     edb72ddd4874057134b382d16cc672d438493ca0,
     groubtime,
+    hadeethBg,
     hadithBG,
     icRadio,
     icSebha,
