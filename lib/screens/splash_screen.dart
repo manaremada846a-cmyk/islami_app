@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:islami_app/gen/assets.gen.dart';
-import 'package:islami_app/screens/home_screen.dart';
+ import 'package:islami_app/screens/intro_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,11 +16,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
      Timer(
-  const Duration(seconds: 3),
+  const Duration(seconds: 12),
   () {
     Navigator.pushReplacementNamed(
       context,
-      HomeScreen.appRoute,
+      IntroScreen.appRoute,
     );
   },
 );

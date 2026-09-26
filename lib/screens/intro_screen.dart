@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:islami_app/commen/colors.dart';
 import 'package:islami_app/commen/images.dart';
+import 'package:islami_app/gen/assets.gen.dart';
+import 'package:islami_app/screens/home_screen.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -17,9 +20,7 @@ class _IntroScreenState extends State<IntroScreen> {
   String imageUrl= AppImages.introImage1;
  String buttonText="Next";
  int count=0;
-  @override
-  Widget build(BuildContext context) {
-    List<String> imagesUrls = [
+  List<String> imagesUrls = [
       AppImages.introImage1,
       AppImages.introImage2,
       AppImages.introImage3,
@@ -47,7 +48,10 @@ class _IntroScreenState extends State<IntroScreen> {
       "High",
       "through the application for free and easily",
     ];
-   {
+   
+  @override
+  Widget build(BuildContext context) {
+   
        
    
     return Scaffold(
@@ -58,15 +62,11 @@ class _IntroScreenState extends State<IntroScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 55,right: 55,top: 55),
-                child: Image.asset(AppImages.islamiBackground),
+                child: Image.asset(Assets.imgHeader.path),
               ),
-              Positioned(
-                top: 140,
-                left: 125,
-                child: Image.asset(AppImages.islamiImage),
-              ),
+              
             ],
-          ),
+          ),Spacer(),
           Padding(
             padding: const EdgeInsets.only(right: 20,left: 20),
             child: Image.asset(imageUrl),
@@ -116,24 +116,20 @@ class _IntroScreenState extends State<IntroScreen> {
           Row(
             children: [
               TextButton(
-                onPressed: () {
-                  if(count!=0){
-                    count--;
-                      text1=texts[count];
-                  imageUrl= imagesUrls[count];
-                  text2=texts2[count];
-                  text3=texts3[count];
-                  }
-                  else{}
-                  
-                  if(count==4) {
-                   buttonText="Finish";
-                   
-                 }else{ buttonText="Next";}
-                  setState(() {
-                    
-                  });
-                },
+               onPressed: () {
+  if (count > 0) {
+    setState(() {
+      count--;
+
+      text1 = texts[count];
+      imageUrl = imagesUrls[count];
+      text2 = texts2[count];
+      text3 = texts3[count];
+
+      buttonText = count == 4 ? "Finish" : "Next";
+    });
+  }
+},
                 child: Text(
                   "Back",
                   style: TextStyle(
@@ -145,23 +141,25 @@ class _IntroScreenState extends State<IntroScreen> {
               ),
               SizedBox(width: 270),
               TextButton(
-                onPressed: () {
-                if(count!=4){
-          count++;
-                  text1=texts[count];
-                  imageUrl= imagesUrls[count];
-                   text2=texts2[count];
-                    text3=texts3[count];
-                 } 
-                 
-                if(count==4) {
-                   buttonText="Finish";
-                   
-                 }else{ buttonText="Next";}
-              setState(() {
-                
-              });
-                },
+               onPressed: () {
+  if (count < 4) {
+    setState(() {
+      count++;
+
+      text1 = texts[count];
+      imageUrl = imagesUrls[count];
+      text2 = texts2[count];
+      text3 = texts3[count];
+
+      buttonText = count == 4 ? "Finish" : "Next";
+    });
+  } else {
+    Navigator.pushReplacementNamed(
+      context,
+      HomeScreen.appRoute,
+    );
+  }
+},
                 child: Text(
                  buttonText,
                   style: TextStyle(
@@ -177,5 +175,4 @@ class _IntroScreenState extends State<IntroScreen> {
       ),
     );
   }
-}
 }

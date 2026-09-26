@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 
         SplashScreen.appRoute: (context) => SplashScreen(),
       },
-      initialRoute: HomeScreen.appRoute,
+      initialRoute: SplashScreen.appRoute,
     );
   }
 }
