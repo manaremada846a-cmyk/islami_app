@@ -45,8 +45,7 @@ class _QuranTabState extends State<QuranTab> {
      final List<SurasData> loadedSuras = savedIds
         .map((idString) {
           final id = int.parse(idString);
-          // بندور على السورة اللي id بتاعها بيساوي الـ id ده
-          return SurasData.allSuras.firstWhere((sura) => sura.id == id);
+           return SurasData.allSuras.firstWhere((sura) => sura.id == id);
         })
         .toList();
 

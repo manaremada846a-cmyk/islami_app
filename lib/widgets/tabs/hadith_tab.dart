@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:islami_app/commen/colors.dart';
 import 'package:islami_app/gen/assets.gen.dart';
 import 'package:islami_app/models/hadeat_model.dart';
-import 'package:islami_app/widgets/tabs/hadith_card.dart';
+import 'package:islami_app/views/hadith_card.dart';
 
 class HadithTab extends StatefulWidget {
   const HadithTab({super.key});

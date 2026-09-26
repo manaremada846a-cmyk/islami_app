@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islami_app/commen/colors.dart';
 import 'package:islami_app/gen/assets.gen.dart';
-import 'package:islami_app/widgets/tabs/time_card.dart';
+import 'package:islami_app/views/time_card.dart';
 
 class TimeTab extends StatelessWidget {
   const TimeTab({super.key});
